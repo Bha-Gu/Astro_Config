@@ -49,8 +49,17 @@ return {
       -- end
     },
     -- enable servers that you already have installed without mason
-    servers = {
-      -- "pyright"
+    servers = { "rust_analyzer" },
+    config = {
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              command = "clippy",
+            }, 
+          },
+        },
+      },
     },
   },
 
