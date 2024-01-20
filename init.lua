@@ -56,7 +56,14 @@ return {
           ["rust-analyzer"] = {
             checkOnSave = {
               command = "clippy",
-            }, 
+            },
+            procMacro = {
+              ignored = {
+                leptos_macro = {
+                  "server",
+                },
+              },
+            },
           },
         },
       },
@@ -78,7 +85,6 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    
     if vim.g.neovide then
       vim.g.neovide_scale_factor = 0.9
       -- vim.g.neovide_transparency = 0.9
@@ -87,7 +93,7 @@ return {
       vim.g.neovide_fullscreen = true
       vim.g.neovide_cursor_vfx_mode = "railgun"
     end
-        -- Put anything you want to happen only in Neovide here
+    -- Put anything you want to happen only in Neovide here
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
