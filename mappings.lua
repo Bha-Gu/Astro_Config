@@ -53,8 +53,8 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
-    ["8"] = { function() vim.cmd "normal! ^" end, desc = "Go to the first non-blank character" },
-    ["9"] = { function() vim.cmd "normal! $" end, desc = "Go to end of line" },
+    -- ["8"] = { function() vim.cmd "normal! ^" end, desc = "Go to the first non-blank character" },
+    -- ["9"] = { function() vim.cmd "normal! $" end, desc = "Go to end of line" },
     ["]e"] = {
       function() vim.cmd ":move +1<CR>" end,
       desc = "Swap current line next line above",
